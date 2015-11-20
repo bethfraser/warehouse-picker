@@ -10,7 +10,7 @@ puts "\n"
 
 # Given an item return the bay that it is in.
 
-# found_bay = bay_for_item('nail filer')
-# puts "The bay for item 'nail filer' is: #{found_bay} (Expect b5)"
-# puts "\n"
+found_bay = bay_for_item('nail filer')
+puts "The bay for item 'nail filer' is: #{found_bay} (Expect b5)"
+puts "\n"
 

@@ -62,9 +62,14 @@ WAREHOUSE = [
 ]
 
 def item_at_bay(input_id)
-  bay_number = ""
-  WAREHOUSE.select! {|bay|  bay_number = bay[:item] if bay[:bay_number] == input_id }
-  return bay_number
+  item_chosen = ""
+  WAREHOUSE.select! {|bay| item_chosen = bay[:item] if bay[:bay_number] == input_id }
+  return item_chosen
 end
 
+def bay_for_item(input_item)
+  bay_number = ""
+  WAREHOUSE.select! {|bay| bay_number = bay[:bay_number] if bay[:item] == input_item }
+  return bay_number
+end
  
