@@ -1,4 +1,4 @@
-ITEMS = [
+WAREHOUSE = [
 { bay_number: "a10",
   item: "rubber band" },
 { bay_number: "a9",
@@ -61,5 +61,10 @@ ITEMS = [
   item: "cookie jar" },
 ]
 
+def item_at_bay(input_id)
+  bay_number = ""
+  WAREHOUSE.select! {|bay|  bay_number = bay[:item] if bay[:bay_number] == input_id }
+  return bay_number
+end
 
  
