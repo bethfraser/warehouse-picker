@@ -28,3 +28,26 @@ found_multiple_bays = multiple_bay_locations("shoe lace", "rusty nail", "leg war
 puts "The bay locations for shoe lace, rusty nail and leg warmers are: #{found_multiple_bays}"
 puts "\n"
 # given "shoe lace, rusty nail, leg warmers", determine that those items need to be collected from "c1, c9, and c10"
+
+#### Advanced
+
+# Given a list of bays, list the items in those bays, and calculate the distance from the two furthest apart bays. 
+
+bays_list = multiple_bay_items("b5","b10","b6")
+bays_max_distance = maximum_bay_distance("b5", "b10", "b6")
+
+puts "The products in bays b5, b10, and b6 are: #{bays_list} \nThe maximum distance between bays is: #{bays_max_distance} (expect 5)"
+puts "\n"
+
+bays_list_2 = multiple_bay_items("b3", "c7", "c9", "a3")
+bays_max_distance_2 = maximum_bay_distance("b3", "c7", "c9", "a3")
+
+puts "The products in bays b3, c7, c9 and a3 are: #{bays_list_2} \nThe maximum distance between bays is: #{bays_max_distance_2} (expect 15)"
+puts "\n"
+
+# given "b5, b10, and b6", determine that the products are "nail filer, cookie jar, and tooth paste", and they're five bays apart
+# given "b3, c7, c9 and a3", determine that the products are "picture frame, paint brush, shoe lace, and blouse", and they're 15 bays apart.)
+# Given a list of products, find the bays that need to be visited, and order them in the order they need to be visited from entrance to exit. For instance:
+
+# given "shoe lace, rusty nail, leg warmers", determine that those items need to be collected from "c1, c9, and c10"
+# given "hanger, deodorant, candy wrapper, rubber band", determine that those items need to be collected from "a10, a4, c8, and b9"
