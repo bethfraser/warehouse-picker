@@ -14,3 +14,16 @@ found_bay = bay_for_item('nail filer')
 puts "The bay for item 'nail filer' is: #{found_bay} (Expect b5)"
 puts "\n"
 
+#### Multiple bays/items
+
+# Given a list of bays, list the items in those bays
+
+found_multiple_items = multiple_bay_items("b5","b10","b6")
+puts "The items in bays b5, b10 and b6 are: #{found_multiple_items}"
+puts "\n"
+
+
+# given "b5, b10, and b6", determine that the products are "nail filer, cookie jar, and tooth paste"
+# Given a list of items find the bays.
+
+# given "shoe lace, rusty nail, leg warmers", determine that those items need to be collected from "c1, c9, and c10"
