@@ -129,8 +129,19 @@ def maximum_bay_distance(*bay_location)
   return distance
 end
 
+def return_full_product_listing(product_entered)
+full_product = Array.new
+WAREHOUSE.select { |product| full_product = product if product[:item] == product_entered}
+full_product
+end
 
-
+def calculate_path(*input_items)
+# I now have an array of the items inputted eg ["shoe lace", "rusty nail", "leg warmers"]
+  input_items.map! { |input_item| input_item = return_full_product_listing(input_item) }
+  sorted_items = input_items.sort_by {|item| item[:location_index]}
+  sorted_items.map! {|item| item = item[:bay_number]}
+  sorted_items.join(", ")
+end
 
 
 

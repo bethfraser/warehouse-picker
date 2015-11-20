@@ -45,9 +45,19 @@ bays_max_distance_2 = maximum_bay_distance("b3", "c7", "c9", "a3")
 puts "The products in bays b3, c7, c9 and a3 are: #{bays_list_2} \nThe maximum distance between bays is: #{bays_max_distance_2} (expect 15)"
 puts "\n"
 
-# given "b5, b10, and b6", determine that the products are "nail filer, cookie jar, and tooth paste", and they're five bays apart
-# given "b3, c7, c9 and a3", determine that the products are "picture frame, paint brush, shoe lace, and blouse", and they're 15 bays apart.)
 # Given a list of products, find the bays that need to be visited, and order them in the order they need to be visited from entrance to exit. For instance:
 
 # given "shoe lace, rusty nail, leg warmers", determine that those items need to be collected from "c1, c9, and c10"
 # given "hanger, deodorant, candy wrapper, rubber band", determine that those items need to be collected from "a10, a4, c8, and b9"
+
+
+path_for_items = calculate_path("shoe lace", "rusty nail", "leg warmers")
+puts "To collect items shoe lace, rusty nail, and leg warmers, the path to be followed is: #{path_for_items} (expect c1, c9, c10)"
+puts "\n"
+
+path_for_items_2 = calculate_path("hanger", "deodorant", "candy wrapper", "rubber band")
+puts "To collect items hanger, deodorant, candy wrapper, and rubber band, the path to be followed is: #{path_for_items_2} (expect a10, a4, c8, b9)"
+
+
+
+
