@@ -122,6 +122,7 @@ def location_index_finder(item_or_bay)
   return location_index
 end
 
+
 def maximum_bay_distance(*bay_location)
   bay_location.map! {|item| item = location_index_finder(item) }
   bay_location = bay_location.sort
@@ -142,6 +143,8 @@ def calculate_path(*input_items)
   sorted_items.map! {|item| item = item[:bay_number]}
   sorted_items.join(", ")
 end
+
+
 
 
 
