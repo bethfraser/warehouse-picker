@@ -22,8 +22,9 @@ found_multiple_items = multiple_bay_items("b5","b10","b6")
 puts "The items in bays b5, b10 and b6 are: #{found_multiple_items}"
 puts "\n"
 
-
-# given "b5, b10, and b6", determine that the products are "nail filer, cookie jar, and tooth paste"
 # Given a list of items find the bays.
 
+found_multiple_bays = multiple_bay_locations("shoe lace", "rusty nail", "leg warmers")
+puts "The bay locations for shoe lace, rusty nail and leg warmers are: #{found_multiple_bays}"
+puts "\n"
 # given "shoe lace, rusty nail, leg warmers", determine that those items need to be collected from "c1, c9, and c10"
