@@ -63,15 +63,15 @@ WAREHOUSE = [
   item: "cookie jar" },
 ]
 
-def item_at_bay(input_id)
+def item_at_bay(input_bay)
   item_chosen = ""
-  WAREHOUSE.select {|bay| item_chosen = bay[:item] if bay[:bay_number] == input_id }
+  WAREHOUSE.select {|product| item_chosen = product[:item] if product[:bay_number] == input_bay }
   return item_chosen
 end
 
 def bay_for_item(input_item)
   bay_number = ""
-  WAREHOUSE.select {|bay| bay_number = bay[:bay_number] if bay[:item] == input_item }
+  WAREHOUSE.select {|product| bay_number = product[:bay_number] if product[:item] == input_item }
   return bay_number
 end
 
@@ -87,7 +87,7 @@ end
 
 def location_index_finder(item_or_bay)
   location_index = 0
-  WAREHOUSE.select {|bay| location_index = WAREHOUSE.index(bay) if bay[:item] == item_or_bay || bay[:bay_number] == item_or_bay }
+  WAREHOUSE.select {|product| location_index = WAREHOUSE.index(product) if product[:item] == item_or_bay || product[:bay_number] == item_or_bay }
   return location_index
 end
 
@@ -98,7 +98,7 @@ def maximum_bay_distance(*bay_location)
 end
 
 def calculate_path(*input_items)
-  input_items.map! { |input_item| input_item = [ bay_for_item(input_item), location_index_finder(input_item)]}
+  input_items.map! { |input_item| input_item = [ bay_for_item(input_item), location_index_finder(input_item) ] }
   sorted_items = input_items.sort_by {|item| item[1]}
   sorted_items.map! {|item| item = item[0]}
   sorted_items.join(", ")
